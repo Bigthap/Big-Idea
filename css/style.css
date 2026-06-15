@@ -405,6 +405,12 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: calc(var(--footer-height) + var(--space-6));
   max-width: var(--container-max);
   margin: 0 auto;
+  display: flex;
+  gap: var(--space-5);
+  align-items: flex-start;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 .kanban__board {
