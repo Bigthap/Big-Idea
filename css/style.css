@@ -240,15 +240,23 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   z-index: 100;
   height: var(--header-height);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 var(--space-6);
   background: var(--bg-glass-strong);
   backdrop-filter: blur(var(--blur-glass));
   -webkit-backdrop-filter: blur(var(--blur-glass));
   border-bottom: 1px solid var(--border-default);
   transition: background var(--transition-normal);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 var(--space-6);
+  gap: var(--space-4);
+  max-width: var(--container-max);
+  margin: 0 auto;
+  flex-wrap: nowrap;
 }
 
 /* ---- Logo ---- */
@@ -2498,7 +2506,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .app-content {
-  padding: 0 var(--space-5);
+  padding: 0;
 }
 
 /* ---- Responsive adjustments for list cards ---- */
