@@ -1847,22 +1847,23 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: var(--space-5);
   background: var(--overlay);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   animation: fadeIn 0.2s ease both;
+  /* overflow:auto lets content scroll within the overlay on very small screens */
+  overflow-y: auto;
 }
 
 .modal--active .modal__content {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1001;
-  width: 92%;
+  /* NOT position:fixed — it's a flex child of overlay */
+  position: relative;
+  width: 100%;
   max-width: 720px;
   max-height: 85vh;
   overflow-y: auto;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   background: var(--bg-glass-strong);

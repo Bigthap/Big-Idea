@@ -12,16 +12,19 @@ export function init() {
   const modal = document.getElementById('detail-modal');
   if (!modal) return;
 
-  // Ensure internal structure exists
-  if (!modal.querySelector('.modal__overlay')) {
-    const backdrop = document.createElement('div');
-    backdrop.className = 'modal__overlay';
-    modal.prepend(backdrop);
+  // Build structure: overlay wraps content for proper flex centering
+  let overlay = modal.querySelector('.modal__overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.className = 'modal__overlay';
+    modal.appendChild(overlay);
   }
-  if (!modal.querySelector('.modal__content')) {
+
+  // Content goes INSIDE overlay (not sibling) so overlay flex centers it
+  if (!overlay.querySelector('.modal__content')) {
     const content = document.createElement('div');
     content.className = 'modal__content';
-    modal.appendChild(content);
+    overlay.appendChild(content);
   }
 
   // ESC key
@@ -29,8 +32,10 @@ export function init() {
     if (e.key === 'Escape') closeDetail();
   });
 
-  // Backdrop click
-  modal.querySelector('.modal__overlay')?.addEventListener('click', closeDetail);
+  // Click on overlay backdrop (not on content) → close
+  overlay.addEventListener('click', (e) => {
+    if (!e.target.closest('.modal__content')) closeDetail();
+  });
 }
 
 /**
