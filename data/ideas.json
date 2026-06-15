@@ -1,0 +1,69 @@
+{
+  "ideas": [
+    {
+      "id": "idea-001",
+      "title": "AI-Powered Meeting Summarizer",
+      "description": "สร้าง tool ที่ใช้ AI สรุปการประชุมแบบ real-time พร้อม action items และ follow-up tasks โดยรองรับทั้งภาษาไทยและอังกฤษ สามารถ integrate กับ Google Meet และ Zoom ได้",
+      "category": "Tech",
+      "priority": "high",
+      "status": "planning",
+      "tags": ["ai", "productivity", "saas"],
+      "notes": [
+        {
+          "timestamp": "2026-06-15T11:00:00+07:00",
+          "content": "Research existing solutions: Otter.ai, Fireflies.ai, Grain"
+        },
+        {
+          "timestamp": "2026-06-15T10:30:00+07:00",
+          "content": "Initial idea: use Whisper for transcription + GPT for summarization"
+        }
+      ],
+      "createdAt": "2026-06-15T10:30:00+07:00",
+      "updatedAt": "2026-06-15T11:00:00+07:00"
+    },
+    {
+      "id": "idea-002",
+      "title": "Personal Finance Dashboard",
+      "description": "Web app สำหรับ track รายรับรายจ่ายส่วนตัว แสดงเป็น charts และ insights ช่วยวางแผนการเงิน มี goal tracking และ budget alerts",
+      "category": "Side Project",
+      "priority": "medium",
+      "status": "in-process",
+      "tags": ["finance", "dashboard", "personal"],
+      "notes": [
+        {
+          "timestamp": "2026-06-14T15:00:00+07:00",
+          "content": "เลือกใช้ Chart.js สำหรับ visualization"
+        },
+        {
+          "timestamp": "2026-06-13T09:00:00+07:00",
+          "content": "ออกแบบ database schema เสร็จแล้ว ใช้ SQLite"
+        }
+      ],
+      "createdAt": "2026-06-13T09:00:00+07:00",
+      "updatedAt": "2026-06-14T15:00:00+07:00"
+    },
+    {
+      "id": "idea-003",
+      "title": "Thai Street Food Guide App",
+      "description": "Mobile app รวบรวมร้านอาหาร street food ทั่วกรุงเทพ พร้อมรีวิว รูปภาพ แผนที่ และระบบแนะนำร้านใกล้เคียง",
+      "category": "Business",
+      "priority": "low",
+      "status": "complete",
+      "tags": ["mobile", "food", "thailand", "maps"],
+      "notes": [
+        {
+          "timestamp": "2026-06-10T12:00:00+07:00",
+          "content": "MVP launch สำเร็จ มี 50 ร้านในระบบ"
+        },
+        {
+          "timestamp": "2026-06-05T14:00:00+07:00",
+          "content": "Beta testing กับกลุ่มเพื่อน 10 คน ได้ feedback ดี"
+        }
+      ],
+      "createdAt": "2026-05-20T08:00:00+07:00",
+      "updatedAt": "2026-06-10T12:00:00+07:00"
+    }
+  ],
+  "categories": ["Tech", "Business", "Side Project", "Personal"],
+  "version": "1.0.0"
+}
